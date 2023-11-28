@@ -6,4 +6,4 @@ set -e
 # 提交修改到github
 git add .
 git commit -m 'update'
-git push origin master
+git push
