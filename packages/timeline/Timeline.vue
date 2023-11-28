@@ -32,7 +32,7 @@ const totalWidth = computed(() => {
 function getDotsHeight () {
   const len = props.timelineData.length
   for (let n = 0; n < len; n++) {
-    dotsHeight.value[n] = getComputedStyle(desc.value[n].firstElementChild || desc.value[n], null).getPropertyValue('line-height')
+    dotsHeight.value[n] = window.getComputedStyle(desc.value[n].firstElementChild || desc.value[n], null).getPropertyValue('line-height')
   }
 }
 watchEffect(() => {

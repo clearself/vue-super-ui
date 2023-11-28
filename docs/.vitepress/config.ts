@@ -99,10 +99,10 @@ export default defineConfig({
               text: '多选框 Checkbox',
               link: '/guide/components/checkbox'
             },
-            {
-              text: '折叠面板 Collapse',
-              link: '/guide/components/collapse'
-            },
+            // {
+            //   text: '折叠面板 Collapse',
+            //   link: '/guide/components/collapse'
+            // },
             {
               text: '倒计时 Countdown',
               link: '/guide/components/countdown'
@@ -127,10 +127,10 @@ export default defineConfig({
               text: '抽屉 Drawer',
               link: '/guide/components/drawer'
             },
-            {
-              text: '文本省略 Ellipsis',
-              link: '/guide/components/ellipsis'
-            },
+            // {
+            //   text: '文本省略 Ellipsis',
+            //   link: '/guide/components/ellipsis'
+            // },
             {
               text: '空状态 Empty',
               link: '/guide/components/empty'
@@ -235,10 +235,10 @@ export default defineConfig({
               text: '表格 Table',
               link: '/guide/components/table'
             },
-            {
-              text: '标签页 Tabs',
-              link: '/guide/components/tabs'
-            },
+            // {
+            //   text: '标签页 Tabs',
+            //   link: '/guide/components/tabs'
+            // },
             {
               text: '标签 Tag',
               link: '/guide/components/tag'
@@ -251,10 +251,10 @@ export default defineConfig({
               text: '文字滚动 TextScroll',
               link: '/guide/components/textscroll'
             },
-            {
-              text: '时间轴 Timeline',
-              link: '/guide/components/timeline'
-            },
+            // {
+            //   text: '时间轴 Timeline',
+            //   link: '/guide/components/timeline'
+            // },
             {
               text: '文字提示 Tooltip',
               link: '/guide/components/tooltip'

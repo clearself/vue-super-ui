@@ -5,6 +5,7 @@
     "ignoreDeprecations": "5.0",
     "isolatedModules": true,
     "baseUrl": ".",
+    "skipLibCheck": true,
     "paths": {
       "@/*": ["./src/*"],
       "images/*": ["./src/assets/images"]

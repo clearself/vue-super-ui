@@ -27,11 +27,11 @@ features:
     details: 目前共有 52 个常用基础 UI 组件，以及 11 个常用工具函数
 ---
 
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { onMounted } from 'vue'
 import { fetchVersion } from './.vitepress/utils/fetchVersion'
 
 onMounted(() => {
   fetchVersion()
 })
-</script>
+</script> -->
