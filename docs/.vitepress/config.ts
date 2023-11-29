@@ -21,9 +21,9 @@ export default defineConfig({
       text: 'Suggest changes to this page'
     },
     // 默认支持icon包括：'discord'|'facebook'|'github'|'instagram'|'linkedin'|'mastodon'|'slack'|'twitter'|'youtube'
-    // socialLinks: [
-    //   { icon: 'github', link: 'https://github.com/themusecatcher/vue-amazing-ui' }
-    // ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/clearself/vue-super-ui' }
+    ],
 
     // algolia: { // algolia 搜索服务 与 内置 search 可二选一
     //   appId: 'SHDNEYGA8Z',
@@ -47,7 +47,16 @@ export default defineConfig({
       },
       { text: '微前端', link: 'https://clearself.github.io/' },
       { text: '易收藏', link: 'https://ysc.dnscn.site/#/login' },
-      // { text: 'Github', link: 'https://github.com/clearself/blog' }
+      { 
+        text: '工程模版',
+        items: [
+          { text: 'Vue2+Webpack PC', link: 'https://github.com/clearself/webpack-pc-vue2-template' },
+          { text: 'Vue2+Vite4 PC', link: 'https://github.com/clearself/vite4.x-vue2-template' },
+          { text: 'Vue2+Webpack Moble', link: 'https://github.com/clearself/moble-vue-template' },
+          { text: '微前端 qiankun', link: 'https://github.com/clearself/qiankun' },
+          { text: 'Vue3+Vite+TS', link: 'https://github.com/clearself/v3-admin-vite' }
+        ]
+      },
     ],
 
     sidebar: {
