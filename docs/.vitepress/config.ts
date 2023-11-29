@@ -25,20 +25,29 @@ export default defineConfig({
     //   { icon: 'github', link: 'https://github.com/themusecatcher/vue-amazing-ui' }
     // ],
 
-    algolia: { // algolia 搜索服务 与 内置 search 可二选一
-      appId: 'SHDNEYGA8Z',
-      apiKey: '91419401b0b0efd31b610e54e5b97249',
-      indexName: 'vue-super-ui'
-    },
-
-    // footer: {
-    //   message: 'Released under the MIT License.',
-    //   copyright: 'Copyright © 2023-present The Muse Catcher'
+    // algolia: { // algolia 搜索服务 与 内置 search 可二选一
+    //   appId: 'SHDNEYGA8Z',
+    //   apiKey: '91419401b0b0efd31b610e54e5b97249',
+    //   indexName: 'vue-super-ui'
     // },
+
+    footer: {
+      message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/yyx990803">Evan You</a>'
+    },
 
     nav: [
       { text: '组件', link: '/guide/features', activeMatch: '/guide/' },
       { text: '工具', link: '/utils/started', activeMatch: '/utils/' },
+      { 
+        text: '博客',
+        items: [
+          { text: '前端技术栈', link: '/fe/html/html-standard' }
+        ]
+      },
+      { text: '微前端', link: 'https://clearself.github.io/' },
+      { text: '易收藏', link: 'https://ysc.dnscn.site/#/login' },
+      // { text: 'Github', link: 'https://github.com/clearself/blog' }
     ],
 
     sidebar: {
@@ -325,6 +334,49 @@ export default defineConfig({
             }
           ]
         }
+      ],
+      '/fe/':[
+        {
+          text: 'HTML',
+          collapsed: false,
+          items: [
+            { text: 'HTML编码规范', link: '/fe/html/html-standard' }
+          ]
+        },
+        {
+          text: 'CSS',
+          collapsed: false,
+          items: [
+            { text: 'CSS编码规范', link: '/fe/css/css-standard' }
+          ]
+        },
+        {
+          text: 'Javascript',
+          collapsed: false,
+          items: [
+            { text: 'Javascript编码规范', link: '/fe/js/js-standard' },
+            { text: 'proxy的阐释', link: '/fe/js/proxy' },
+            { text: '防抖 VS 节流', link: '/fe/js/throttle' },
+            { text: 'js运行机制', link: '/fe/js/operating' },
+            { text: '面向对象三种继承方式', link: '/fe/js/js-inherit' },
+            { text: 'URLSearchParams API', link: '/fe/js/url-api' },
+            { text: '动手实现Promise', link: '/fe/js/promise' },
+            { text: 'RGB，HEX，HSL相互转换', link: '/fe/js/color-change' },
+            { text: '前端实用方法', link: '/fe/js/fe-function' }
+          ]
+        },
+        {
+          text: 'Vue',
+          collapsed: false,
+          items: [
+            { text: 'Vue2和Vue3的区别', link: '/fe/vue/vue2-vue3' }
+          ]
+        },
+        { text: '单点登录实现方式', link: '/fe/single-login' },
+        { text: 'git常用命令', link: '/fe/git' },
+        { text: '前端项目优化', link: '/fe/fe-optimize' },
+        { text: '前端优秀博客', link: '/fe/blog' },
+        { text: 'ShowDoc本地部署', link: '/fe/showdoc' }
       ]
     }
   }
