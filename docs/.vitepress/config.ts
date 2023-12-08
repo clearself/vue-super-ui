@@ -42,7 +42,7 @@ export default defineConfig({
       { 
         text: '博客',
         items: [
-          { text: '前端技术栈', link: '/fe/html/html-standard' }
+          { text: '前端技术栈', link: '/fe/html/standard' }
         ]
       },
       { text: '微前端', link: 'https://clearself.github.io/' },
@@ -349,7 +349,8 @@ export default defineConfig({
           text: 'HTML',
           collapsed: false,
           items: [
-            { text: 'HTML编码规范', link: '/fe/html/html-standard' }
+            { text: 'HTML编码规范', link: '/fe/html/standard' },
+            { text: '回流和重绘制', link: '/fe/html/reflux' }
           ]
         },
         {
