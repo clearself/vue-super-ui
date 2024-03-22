@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: `Vue Super UI`,
   description: 'Super UI 组件库',
-  base: '/vue-super-ui/',
+  // base: '/vue-super-ui/',
 
   head: [ // 网站图标
     ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://cn.vitejs.dev/viteconf.svg' }]
@@ -379,9 +379,11 @@ export default defineConfig({
           text: 'Vue',
           collapsed: false,
           items: [
-            { text: 'Vue2和Vue3的区别', link: '/fe/vue/vue2-vue3' }
+            { text: 'Vue2和Vue3的区别', link: '/fe/vue/vue2-vue3' },
+            { text: 'Vue3组合API', link: '/fe/vue/vue3-api' }
           ]
         },
+        { text: 'Nginx', link: '/fe/nginx' },
         { text: '单点登录实现方式', link: '/fe/single-login' },
         { text: 'git常用命令', link: '/fe/git' },
         { text: '前端项目优化', link: '/fe/fe-optimize' },

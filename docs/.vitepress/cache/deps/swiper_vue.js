@@ -3,9 +3,9 @@ import {
   SwiperSlide,
   useSwiper,
   useSwiperSlide
-} from "./chunk-OYBWHBH2.js";
-import "./chunk-6L6XUYC4.js";
+} from "./chunk-KFIPFJVT.js";
 import "./chunk-V7AUFIRV.js";
+import "./chunk-6L6XUYC4.js";
 import "./chunk-UXIASGQL.js";
 export {
   Swiper,

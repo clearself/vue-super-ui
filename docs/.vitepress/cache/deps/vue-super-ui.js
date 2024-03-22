@@ -1,27 +1,18 @@
 import {
-  Autoplay,
-  EffectFade,
-  Navigation,
-  Pagination
-} from "./chunk-PQMQMUD6.js";
-import {
   useQRCode
 } from "./chunk-APUKAVTN.js";
 import {
-  Ba
-} from "./chunk-2MGW4XEB.js";
+  TransitionPresets,
+  useTransition
+} from "./chunk-3GQCVKPN.js";
+import "./chunk-TRGGXRGV.js";
 import {
   Swiper,
   SwiperSlide
-} from "./chunk-OYBWHBH2.js";
-import "./chunk-6L6XUYC4.js";
+} from "./chunk-KFIPFJVT.js";
 import {
-  identity,
-  isClient,
-  promiseTimeout,
-  toValue,
-  tryOnScopeDispose
-} from "./chunk-TRGGXRGV.js";
+  Ba
+} from "./chunk-AAB7WLAL.js";
 import {
   Fragment,
   Transition,
@@ -61,172 +52,14 @@ import {
   withKeys,
   withModifiers
 } from "./chunk-V7AUFIRV.js";
-import "./chunk-OQ7JDYPE.js";
+import {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination
+} from "./chunk-PQMQMUD6.js";
+import "./chunk-6L6XUYC4.js";
 import "./chunk-UXIASGQL.js";
-
-// node_modules/vue-super-ui/node_modules/@vueuse/core/index.mjs
-var defaultDocument = isClient ? window.document : void 0;
-var defaultNavigator = isClient ? window.navigator : void 0;
-var defaultLocation = isClient ? window.location : void 0;
-var _global = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
-var globalKey = "__vueuse_ssr_handlers__";
-var handlers = getHandlers();
-function getHandlers() {
-  if (!(globalKey in _global))
-    _global[globalKey] = _global[globalKey] || {};
-  return _global[globalKey];
-}
-var defaultState = {
-  x: 0,
-  y: 0,
-  pointerId: 0,
-  pressure: 0,
-  tiltX: 0,
-  tiltY: 0,
-  width: 0,
-  height: 0,
-  twist: 0,
-  pointerType: null
-};
-var keys = Object.keys(defaultState);
-var DEFAULT_UNITS = [
-  { max: 6e4, value: 1e3, name: "second" },
-  { max: 276e4, value: 6e4, name: "minute" },
-  { max: 72e6, value: 36e5, name: "hour" },
-  { max: 5184e5, value: 864e5, name: "day" },
-  { max: 24192e5, value: 6048e5, name: "week" },
-  { max: 28512e6, value: 2592e6, name: "month" },
-  { max: Number.POSITIVE_INFINITY, value: 31536e6, name: "year" }
-];
-var _TransitionPresets = {
-  easeInSine: [0.12, 0, 0.39, 0],
-  easeOutSine: [0.61, 1, 0.88, 1],
-  easeInOutSine: [0.37, 0, 0.63, 1],
-  easeInQuad: [0.11, 0, 0.5, 0],
-  easeOutQuad: [0.5, 1, 0.89, 1],
-  easeInOutQuad: [0.45, 0, 0.55, 1],
-  easeInCubic: [0.32, 0, 0.67, 0],
-  easeOutCubic: [0.33, 1, 0.68, 1],
-  easeInOutCubic: [0.65, 0, 0.35, 1],
-  easeInQuart: [0.5, 0, 0.75, 0],
-  easeOutQuart: [0.25, 1, 0.5, 1],
-  easeInOutQuart: [0.76, 0, 0.24, 1],
-  easeInQuint: [0.64, 0, 0.78, 0],
-  easeOutQuint: [0.22, 1, 0.36, 1],
-  easeInOutQuint: [0.83, 0, 0.17, 1],
-  easeInExpo: [0.7, 0, 0.84, 0],
-  easeOutExpo: [0.16, 1, 0.3, 1],
-  easeInOutExpo: [0.87, 0, 0.13, 1],
-  easeInCirc: [0.55, 0, 1, 0.45],
-  easeOutCirc: [0, 0.55, 0.45, 1],
-  easeInOutCirc: [0.85, 0, 0.15, 1],
-  easeInBack: [0.36, 0, 0.66, -0.56],
-  easeOutBack: [0.34, 1.56, 0.64, 1],
-  easeInOutBack: [0.68, -0.6, 0.32, 1.6]
-};
-var TransitionPresets = Object.assign({}, { linear: identity }, _TransitionPresets);
-function createEasingFunction([p02, p12, p22, p3]) {
-  const a = (a12, a22) => 1 - 3 * a22 + 3 * a12;
-  const b = (a12, a22) => 3 * a22 - 6 * a12;
-  const c = (a12) => 3 * a12;
-  const calcBezier = (t, a12, a22) => ((a(a12, a22) * t + b(a12, a22)) * t + c(a12)) * t;
-  const getSlope = (t, a12, a22) => 3 * a(a12, a22) * t * t + 2 * b(a12, a22) * t + c(a12);
-  const getTforX = (x) => {
-    let aGuessT = x;
-    for (let i = 0; i < 4; ++i) {
-      const currentSlope = getSlope(aGuessT, p02, p22);
-      if (currentSlope === 0)
-        return aGuessT;
-      const currentX = calcBezier(aGuessT, p02, p22) - x;
-      aGuessT -= currentX / currentSlope;
-    }
-    return aGuessT;
-  };
-  return (x) => p02 === p12 && p22 === p3 ? x : calcBezier(getTforX(x), p12, p3);
-}
-function lerp(a, b, alpha) {
-  return a + alpha * (b - a);
-}
-function toVec(t) {
-  return (typeof t === "number" ? [t] : t) || [];
-}
-function executeTransition(source, from, to, options = {}) {
-  var _a2, _b;
-  const fromVal = toValue(from);
-  const toVal = toValue(to);
-  const v12 = toVec(fromVal);
-  const v22 = toVec(toVal);
-  const duration = (_a2 = toValue(options.duration)) != null ? _a2 : 1e3;
-  const startedAt = Date.now();
-  const endAt = Date.now() + duration;
-  const trans = typeof options.transition === "function" ? options.transition : (_b = toValue(options.transition)) != null ? _b : identity;
-  const ease = typeof trans === "function" ? trans : createEasingFunction(trans);
-  return new Promise((resolve) => {
-    source.value = fromVal;
-    const tick = () => {
-      var _a22;
-      if ((_a22 = options.abort) == null ? void 0 : _a22.call(options)) {
-        resolve();
-        return;
-      }
-      const now = Date.now();
-      const alpha = ease((now - startedAt) / duration);
-      const arr = toVec(source.value).map((n, i) => lerp(v12[i], v22[i], alpha));
-      if (Array.isArray(source.value))
-        source.value = arr.map((n, i) => {
-          var _a3, _b2;
-          return lerp((_a3 = v12[i]) != null ? _a3 : 0, (_b2 = v22[i]) != null ? _b2 : 0, alpha);
-        });
-      else if (typeof source.value === "number")
-        source.value = arr[0];
-      if (now < endAt) {
-        requestAnimationFrame(tick);
-      } else {
-        source.value = toVal;
-        resolve();
-      }
-    };
-    tick();
-  });
-}
-function useTransition(source, options = {}) {
-  let currentId = 0;
-  const sourceVal = () => {
-    const v = toValue(source);
-    return typeof v === "number" ? v : v.map(toValue);
-  };
-  const outputRef = ref(sourceVal());
-  watch(sourceVal, async (to) => {
-    var _a2, _b;
-    if (toValue(options.disabled))
-      return;
-    const id = ++currentId;
-    if (options.delay)
-      await promiseTimeout(toValue(options.delay));
-    if (id !== currentId)
-      return;
-    const toVal = Array.isArray(to) ? to.map(toValue) : toValue(to);
-    (_a2 = options.onStarted) == null ? void 0 : _a2.call(options);
-    await executeTransition(outputRef, outputRef.value, toVal, {
-      ...options,
-      abort: () => {
-        var _a22;
-        return id !== currentId || ((_a22 = options.abort) == null ? void 0 : _a22.call(options));
-      }
-    });
-    (_b = options.onFinished) == null ? void 0 : _b.call(options);
-  }, { deep: true });
-  watch(() => toValue(options.disabled), (disabled) => {
-    if (disabled) {
-      currentId++;
-      outputRef.value = sourceVal();
-    }
-  });
-  tryOnScopeDispose(() => {
-    currentId++;
-  });
-  return computed(() => toValue(options.disabled) ? sourceVal() : outputRef.value);
-}
 
 // node_modules/vue-super-ui/dist/vue-super-ui.js
 function _6(l = Date.now(), a = "YYYY-MM-DD HH:mm:ss") {
