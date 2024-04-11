@@ -3,11 +3,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: `Vue Super UI`,
   description: 'Super UI 组件库',
-  // base: '/vue-super-ui/',
-
+  base: '/vue-super-ui/',
   head: [ // 网站图标
     ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://cn.vitejs.dev/viteconf.svg' }]
-    // ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
   ],
   appearance: true, // 默认 true，设为 false 则无法切换dark/light主题，可选 'dark' true false
   markdown: {
@@ -372,7 +370,10 @@ export default defineConfig({
             { text: 'URLSearchParams API', link: '/fe/js/url-api' },
             { text: '动手实现Promise', link: '/fe/js/promise' },
             { text: 'RGB，HEX，HSL相互转换', link: '/fe/js/color-change' },
-            { text: '前端实用方法', link: '/fe/js/fe-function' }
+            { text: '前端实用方法', link: '/fe/js/fe-function' },
+            { text: 'es6新增语法', link: '/fe/js/es6' },
+            { text: '大数字加减乘除运算问题', link: '/fe/js/big-num' },
+            { text: '接口数据的大数字问题', link: '/fe/js/big-data' }
           ]
         },
         {
@@ -380,7 +381,9 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Vue2和Vue3的区别', link: '/fe/vue/vue2-vue3' },
-            { text: 'Vue3组合API', link: '/fe/vue/vue3-api' }
+            { text: 'Vue3组合API', link: '/fe/vue/vue3-api' },
+            { text: 'useTable hooks封装', link: '/fe/vue/useTable' }
+            
           ]
         },
         { text: 'Nginx', link: '/fe/nginx' },

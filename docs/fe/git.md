@@ -1,4 +1,6 @@
-```git
+# git 常用命令
+
+```ts
 git clone <url> ：克隆代码
 git add <file>：添加文件到暂存区
 git add .：要添加当前目录中的所有文件

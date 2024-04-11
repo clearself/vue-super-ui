@@ -5,7 +5,7 @@ import { routes } from '@/router'
 const installData = ref([
   {
     header: 'Install',
-    text: `pnpm i vue-amazing-ui\n# or\nyarn add vue-amazing-ui\n# or\nnpm i vue-amazing-ui`
+    text: `pnpm i vue-super-ui\n# or\nyarn add vue-super-ui\n# or\nnpm i vue-super-ui`
   }
 ])
 const collapseData = ref([
@@ -24,7 +24,7 @@ const collapseData = ref([
   downloadFile,
   formatNumber,
   toggleDark
-} from 'vue-amazing-ui'
+} from 'vue-super-ui'
 <\/script>`
   }
 ])
@@ -36,7 +36,7 @@ const sum = computed(() => {
 <template>
   <div>
     <Space align="top" :size="6">
-      <h1>Vue Amazing UI</h1>
+      <h1>Vue Supper UI</h1>
       <Tag color="lime">{{ pkg.version }}</Tag>
     </Space>
     <Descriptions class="mb10 mt30" title="生产环境依赖" :column="{md: 2, lg: 3, xl: 4}">

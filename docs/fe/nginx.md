@@ -1,28 +1,43 @@
 # Nginx 相关知识点
+
 ## nginx配置开机启动（Windows环境）
+
 ### 步骤：
-1. 载nginx，并解压 [nginx下载]('https://nginx.org/en/download.html')
+
+1. 载nginx，并解压 [nginx下载](https://nginx.org/en/download.html)
 2. 配置nginx.conf，并启动Nginx
 3. 开机自启动
+
 ## 1、下载nginx，并解压
+
 ![img](/nginx/nginx1.png)
+
 ## 2、配置nginx.conf，并启动Nginx
+
 ### nginx.conf配置
+
 ![img](/nginx/nginx2.png)
+
 ### 两种方法：
+
 1. 方法一：直接双击nginx.exe，双击后一个黑色弹窗一闪而过。
 2. 方法二：打开cmd命令窗口，切换到nginx目录下，输入命令
-```bush
+
+```ts
 start nginx
 ```
-启动成功，访问 http://localhost如下（端口改为了其他，默认80）：
-### 停止nginx：
-```bush
+
+<!-- 启动成功，访问 http://localhost如下（端口改为了其他，默认80）： -->
+
+### 停止nginx
+
+```ts
 nginx -s stop 
 ```
+
 ## 3、开机自启动
 
-使用WinSW（[WinSW下载]('链接：https://pan.baidu.com/s/1WaevJy3RFepFyM-dT_QWOw' ) 提取码：fql2），将exe和xml文件放到和jar包一个目录，并根据自己需要进行重命名，如下
+使用WinSW（[WinSW下载](https://pan.baidu.com/s/1WaevJy3RFepFyM-dT_QWOw ) 提取码：fql2），将exe和xml文件放到和jar包一个目录，并根据自己需要进行重命名，如下
 ![img](/nginx/nginx3.png)
 
 xml文件配置如下：
@@ -42,7 +57,7 @@ xml文件配置如下：
 
 相关命令如下：
 
-```bush
+```ts
 nginx-service.exe install #安装服务
 nginx-service.exe uninstall#卸载服务
 nginx-service.exe start #启动服务

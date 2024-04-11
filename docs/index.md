@@ -7,7 +7,7 @@ titleTemplate: Super UI Components Library
 hero:
   name: Vue Super UI
   text: Super UI 组件库
-  tagline: 基于 Vue3 + TS + Vite 开发
+  tagline: 基于 Vue3 + Ant Design Vue + Vite 开发
   image:
     src: /amazing-logo.svg
     alt: Vue Super UI
