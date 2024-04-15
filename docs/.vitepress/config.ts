@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
-
+const isProduction = process.env.NODE_ENV === 'production';
 export default defineConfig({
   title: `Vue Super UI`,
   description: 'Super UI 组件库',
-  base: '/vue-super-ui/',
+  base: isProduction?'/vue-super-ui/':'/',
   head: [ // 网站图标
     ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://cn.vitejs.dev/viteconf.svg' }]
   ],
@@ -382,7 +382,10 @@ export default defineConfig({
           items: [
             { text: 'Vue2和Vue3的区别', link: '/fe/vue/vue2-vue3' },
             { text: 'Vue3组合API', link: '/fe/vue/vue3-api' },
-            { text: 'useTable hooks封装', link: '/fe/vue/useTable' }
+            { text: 'useTable hooks封装', link: '/fe/vue/useTable' },
+            { text: 'table表头自定义组件封装', link: '/fe/vue/fields-setting' }
+
+            
             
           ]
         },

@@ -2,7 +2,7 @@
 
 ## nginx配置开机启动（Windows环境）
 
-### 步骤：
+### 步骤
 
 1. 载nginx，并解压 [nginx下载](https://nginx.org/en/download.html)
 2. 配置nginx.conf，并启动Nginx
@@ -18,12 +18,12 @@
 
 ![img](/nginx/nginx2.png)
 
-### 两种方法：
+### 两种方法
 
 1. 方法一：直接双击nginx.exe，双击后一个黑色弹窗一闪而过。
 2. 方法二：打开cmd命令窗口，切换到nginx目录下，输入命令
 
-```ts
+```shell
 start nginx
 ```
 
@@ -31,7 +31,7 @@ start nginx
 
 ### 停止nginx
 
-```ts
+```shell
 nginx -s stop 
 ```
 
@@ -57,7 +57,7 @@ xml文件配置如下：
 
 相关命令如下：
 
-```ts
+```shell
 nginx-service.exe install #安装服务
 nginx-service.exe uninstall#卸载服务
 nginx-service.exe start #启动服务
