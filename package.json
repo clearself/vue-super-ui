@@ -24,7 +24,7 @@
     "dev": "vite",
     "docs:dev": "vitepress dev docs --port 8000 --open",
     "docs:build": "vitepress build docs",
-    "docs:deploy": "sh scripts/deploy.sh",
+    "docs:deploy": "scp -r docs/.vitepress/dist/* root@101.43.221.193:/www/wwwroot/fly/vue-super-ui",
     "docs:preview": "vitepress preview docs",
     "build": "run-s clean build:lib",
     "clean": "rimraf ./dist",

@@ -384,11 +384,10 @@ export default defineConfig({
             { text: 'Vue3组合API', link: '/fe/vue/vue3-api' },
             { text: 'useTable hooks封装', link: '/fe/vue/useTable' },
             { text: 'table表头自定义组件封装', link: '/fe/vue/fields-setting' }
-
-            
-            
           ]
         },
+        
+        { text: 'Docker安装及容器部署', link: '/fe/docker' },
         { text: 'Nginx', link: '/fe/nginx' },
         { text: '单点登录实现方式', link: '/fe/single-login' },
         { text: 'git常用命令', link: '/fe/git' },
