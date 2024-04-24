@@ -7,7 +7,7 @@
 
 ## Document & Online preview
 
-[Vue Super UI](https://clearself.github.io/vue-super-ui/)
+[Vue Super UI](https://www.flypa.cn/vue-super-ui)
 
 ## Install & Use
 
@@ -102,9 +102,7 @@ TextScroll | 文字滚动 | Timeline | 时间轴
 Tooltip | 文字提示 | Upload | 上传
 Video | 播放器 | Waterfall | 瀑布流
 
-## Details
 
-[My CSDN Blogs](https://blog.csdn.net/Dandrose)
 
 ## Functions
 
